@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.btn{
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: blueviolet;
+    color: aliceblue;
+    border: none;
+    position: relative;
+    
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left:-3px;
+    height: 24px;
+    width: 24px;
+    border-top: solid rgb(102, 31, 168);
+    border-left: solid rgb(102, 31, 168);
+    transition: all 0.2s;
+}
+
+.btn:hover::before{
+    height: 100%;
+    width: 100%;
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    bottom: -3.5px;
+    right: -3px;
+    height: 24px;
+    width: 24px;
+    border-bottom: solid rgb(102, 31, 168);
+    border-right: solid rgb(102, 31, 168);
+    transition: all 0.2s;
+}
+
+.btn:hover::after{
+    height: 100%;
+    width: 100%;
+}
